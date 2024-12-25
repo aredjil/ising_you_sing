@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 import matplotlib.colors as mcolors
 from tqdm import tqdm 
-
+import os 
 cmap = mcolors.ListedColormap(["#99d8c9", "#2ca25f"])
 class Ising:
 
@@ -71,6 +71,10 @@ class Ising:
             lattice, energy = self.metropolis(lattice, energy_list[iter-1])
             magnetization[iter] = self.compute_magnetization(lattice)
             if iter % 10 == 0:
+                try:
+                    os.makedirs("./plots", exist_ok=True)
+                except Exception as e: 
+                    print(f"An execption occured {e}")
                 fig= self.show_lattice(lattice, magnetization, iter)
                 fig.savefig(f"./plots/lattice_{iter}.png")
                 plt.close(fig)
