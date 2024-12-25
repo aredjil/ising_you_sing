@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 import numpy as np 
-from Ising.Ising import *
+from Ising import Ising
 
 def main():
     print("Hello sweet world")
-    hello()
 if __name__ =="__main__":
     main()
