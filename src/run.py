@@ -7,7 +7,7 @@ from Ising.vis_utils import *
 def main():
     n, seed, p = 100, 42, 0.8
     kb, J, T = 1.0, 1.0, 1.0
-    t_max = n * n 
+    t_max = n * n * 10  
     ising = Ising(n=n, 
                   p=p,
                   kb=kb, 
@@ -18,7 +18,7 @@ def main():
     m = ising.solve()
 if __name__ =="__main__":
     path = "./plots" # Path for a temporary directory where to save plots 
-    main()
-    gen_gif(10000, 0, 10, 10, path)
+    # main()
+    gen_gif(100 *100*10, 0, 100, 5, path)
     #NOTE: there is a minro error in the removing file, fix it 
     # remove_plots(1000, 0, 50, path)

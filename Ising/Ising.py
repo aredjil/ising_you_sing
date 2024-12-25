@@ -39,21 +39,21 @@ class Ising:
         ax[0].set_yticks([])
         ax[0].grid(which='minor', color='gray', linestyle='-', linewidth=0.5)
         ax[0].tick_params(which='minor', size=0)
-        ax[0].set_title(f"Spin Lattice Configuration")
+        ax[0].set_title(f"Lattice Configuration")
         cbar = plt.colorbar(cax, ax=ax[0], ticks=[-1, 1])
         cbar.ax.set_yticklabels(['-1 (Down)', '1 (Up)'])  # Set labels for the ticks
         # cbar.set_label('$S_i$')
 
-        ax[1].scatter(iter, magnetization[iter], color='#2ca25f', zorder=5, label=f"Lattice magnetization")
+        ax[1].scatter(iter, magnetization[iter], color='#2ca25f', zorder=5, label=f"magnetization")
         ax[1].plot(range(iter + 1), magnetization[:iter + 1], color='#99d8c9')
         ax[1].set_xlim(0, self._t_max+10)
         ax[1].set_ylim(-1, 1)
-        ax[1].set_title("Magnetization Over Time")
+        ax[1].set_title("Magnetization Over Steps")
         ax[1].set_xlabel("Step")
         ax[1].set_ylabel("Magnetization")
         ax[1].grid()
         ax[1].legend()
-        fig.suptitle(f"Spin configuration and Magnetisation of a {n} by {n} square lattice randomly intilized with most spins down, with T={self._Temp}, and J={self._J} for {n*n} steps \n Step: {iter}")
+        fig.suptitle(f"Spin configuration and Magnetisation of a {n} by {n} square lattice randomly intilized with most spins down, with T={self._Temp}, and J={self._J} for {self._t_max} steps \n Step: {iter}")
         return fig      
     def compute_magnetization(self, lattice):
         # Compute the magnetisation of the lattice  

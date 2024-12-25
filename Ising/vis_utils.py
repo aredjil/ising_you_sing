@@ -19,13 +19,14 @@ def create_gif(image_folder, output_path, m_range, duration=100):
             file_path = os.path.join(image_folder, file_name)
             if os.path.exists(file_path):
                 img = Image.open(file_path)
-                images.append(img)
+                images.append(img.copy())
+                img.close()
             else:
                 print(f"File not found: {file_path}")
         
         if images:
             images[0].save(
-                output_path+"/ising_you_sing.gif",
+                output_path+"/ising.gif",
                 save_all=True,
                 append_images=images[1:],  
                 duration=duration  
