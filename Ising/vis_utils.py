@@ -15,7 +15,7 @@ def create_gif(image_folder, output_path, m_range, duration=100):
     try:
         print("Generating the GIF...")
         for m in m_range:
-            file_name = f"lattice_{m}.png"  
+            file_name = f"plot_{m}.png"  
             file_path = os.path.join(image_folder, file_name)
             if os.path.exists(file_path):
                 img = Image.open(file_path)
@@ -37,7 +37,6 @@ def create_gif(image_folder, output_path, m_range, duration=100):
     except Exception as e:
         print(f"An error occurred: {e}")
 def gen_gif(max_m:int, min_m:int, step_m:int, duration:int, hist_path:str):
-    
     output_gif = "./gifs"  
     m_range = range(min_m, max_m, step_m) 
     duration_per_frame = duration  
