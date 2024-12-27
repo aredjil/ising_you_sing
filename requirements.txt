@@ -1,0 +1,74 @@
+asttokens==3.0.0
+attrs==24.3.0
+backcall==0.2.0
+beautifulsoup4==4.12.3
+bleach==6.2.0
+certifi==2024.12.14
+charset-normalizer==3.4.1
+contourpy @ file:///croot/contourpy_1732540045555/work
+cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
+decorator==5.1.1
+defusedxml==0.7.1
+docopt==0.6.2
+executing==2.1.0
+fastjsonschema==2.21.1
+fonttools @ file:///croot/fonttools_1713551344105/work
+idna==3.10
+ipython==8.12.3
+jedi==0.19.2
+Jinja2==3.1.5
+jsonschema==4.23.0
+jsonschema-specifications==2024.10.1
+jupyter_client==8.6.3
+jupyter_core==5.7.2
+jupyterlab_pygments==0.3.0
+kiwisolver @ file:///work/perseverance-python-buildout/croot/kiwisolver_1698847502605/work
+llvmlite @ file:///croot/llvmlite_1720455102465/work
+MarkupSafe==3.0.2
+matplotlib==3.9.2
+matplotlib-inline==0.1.7
+mistune==3.0.2
+mkl-service==2.4.0
+mkl_fft @ file:///io/mkl313/mkl_fft_1730824109137/work
+mkl_random @ file:///io/mkl313/mkl_random_1730823916628/work
+nbclient==0.10.2
+nbconvert==7.16.4
+nbformat==5.10.4
+numba @ file:///croot/numba_1720540961817/work
+numpy @ file:///croot/numpy_and_numpy_base_1708638617955/work/dist/numpy-1.26.4-cp312-cp312-linux_x86_64.whl#sha256=1d700f51d8b4fa684d858c9e3b56b1656bc5c82b6b79ff08d4e3b491c430059f
+packaging @ file:///croot/packaging_1720101850331/work
+pandocfilters==1.5.1
+parso==0.8.4
+pexpect==4.9.0
+pickleshare==0.7.5
+pillow @ file:///croot/pillow_1731594689713/work
+pipreqs==0.5.0
+platformdirs==4.3.6
+ply @ file:///work/perseverance-python-buildout/croot/ply_1698846188635/work
+prompt_toolkit==3.0.48
+ptyprocess==0.7.0
+pure_eval==0.2.3
+Pygments==2.18.0
+pyparsing @ file:///croot/pyparsing_1731445506121/work
+PyQt5==5.15.10
+PyQt5-sip @ file:///work/perseverance-python-buildout/croot/pyqt-split_1698847927472/work/pyqt_sip
+python-dateutil @ file:///croot/python-dateutil_1716495738603/work
+pyzmq==26.2.0
+referencing==0.35.1
+requests==2.32.3
+rpds-py==0.22.3
+setuptools==75.1.0
+sip @ file:///work/perseverance-python-buildout/croot/sip_1698846977033/work
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+soupsieve==2.6
+stack-data==0.6.3
+tinycss2==1.4.0
+tornado @ file:///croot/tornado_1733960490606/work
+tqdm @ file:///croot/tqdm_1724853939799/work
+traitlets==5.14.3
+unicodedata2 @ file:///croot/unicodedata2_1713212950228/work
+urllib3==2.3.0
+wcwidth==0.2.13
+webencodings==0.5.1
+wheel==0.44.0
+yarg==0.1.9
