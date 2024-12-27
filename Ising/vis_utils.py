@@ -41,7 +41,7 @@ def create_gif(input_files_path:str, input_file_name:str, output_path:str, outpu
                 output_path+"/"+output_file_name+".gif",
                 save_all=True,
                 append_images=images[1:],  
-                duration=duration, 
+                duration=duration,
                 loop=0  
             )
             print(f"GIF saved at {output_path}")

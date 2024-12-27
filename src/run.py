@@ -10,10 +10,10 @@ plt.style.use("Solarize_Light2")
 
 
 def main():
-    n, seed, p= 32, 42, 0.1
+    n, seed, p= 500, 42, 0.1
     kb, J = 1.0, 1.0
     t_max = 100_000
-    temp = np.linspace(1.53, 3.28, 50)
+    temp = np.linspace(1.53, 3.28, 20)
     mag = []
     heat_capacity = []
     energies = []
@@ -44,6 +44,6 @@ if __name__ =="__main__":
     path = "./plots"
     input_file_name = "plot_"
     output_file_name ="ising"
-    duration = 200 
+    duration = 300 
 
-    gen_gif(50, 0, 1, duration, input_file_name, path, output_file_name)
+    gen_gif(20, 0, 1, duration, input_file_name, path, output_file_name)
