@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 plt.style.use("Solarize_Light2")
 cmap = mcolors.ListedColormap(["#99d8c9", "#2ca25f"])
+#NOTE: Move the plot_fig function to vis_utils 
 
 def plot_fig(temp, lattice, mag, energies, heat_capacity, iter):
     fig, ax = plt.subplots(ncols=2, nrows=2, figsize=(12, 12))
@@ -82,4 +83,8 @@ if __name__ =="__main__":
     # path = "./plots" # Path for a temporary directory where to save plots 
     # main()
     path = "./plots"
-    gen_gif(50, 0, 1, 200, path)
+    input_file_name = "plot_"
+    output_file_name ="ising"
+    duration = 200 
+
+    gen_gif(50, 0, 1, duration, input_file_name, path, output_file_name)

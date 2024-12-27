@@ -5,6 +5,7 @@ import matplotlib.colors as mcolors
 from tqdm import tqdm 
 import os 
 cmap = mcolors.ListedColormap(["#99d8c9", "#2ca25f"])
+#NOTE: COMMENT THE CLASS and its methods. 
 class Ising:
 
     def __init__(self, n:int, p:float|None, kb:float, J:float, Temp:float, t_max:float, seed:np.int32|None):
