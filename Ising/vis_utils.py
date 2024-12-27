@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 from PIL import Image 
 import os 
-
+#NOTE: Create the output folder if it does not already exists. 
 def create_gif(input_files_path:str, input_file_name:str, output_path:str, output_file_name:str, m_range:int, duration:int=100):
     """
     Generate a gif using saved plots. 
@@ -35,7 +35,7 @@ def create_gif(input_files_path:str, input_file_name:str, output_path:str, outpu
         
         if images:
             images[0].save(
-                output_path+output_file_name+".gif",
+                output_path+"/"+output_file_name+".gif",
                 save_all=True,
                 append_images=images[1:],  
                 duration=duration, 

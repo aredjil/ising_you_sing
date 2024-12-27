@@ -10,6 +10,7 @@ cmap = mcolors.ListedColormap(["#99d8c9", "#2ca25f"])
 #NOTE: Move the plot_fig function to vis_utils 
 
 def plot_fig(temp, lattice, mag, energies, heat_capacity, iter):
+    #NOTE: Create the output folder if it does not already exists. 
     fig, ax = plt.subplots(ncols=2, nrows=2, figsize=(12, 12))
     cax = ax[0, 0].imshow(lattice, cmap=cmap)
     ax[0, 0].set_xticks([])
