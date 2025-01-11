@@ -7,6 +7,9 @@
 #include <filesystem>
 #include<fstream>
 #include<iomanip>
+#ifdef _OPENACC
+#include<openacc.h>
+#endif
 
 std::mt19937_64 gen(std::random_device{}()); // Create the random number generator globally
 double get_uniform()
@@ -66,6 +69,10 @@ double get_energy(const std::vector<int> &lattice, const int &n, const double &J
 // Perform one Metropolis-Hasting step
 void step(std::vector<int> &lattice, const int &n, const double &J, const double &beta)
 {
+    #ifdef _OPENACC
+    #pragma acc parallel loop 
+    #else
+    #endif
     for (int k = 0; k < n * n; k++)
     {
         int i = get_indices(n);
@@ -111,4 +118,6 @@ void simulate(std::vector<int> &lattice, const int &n, const double &J, const do
         }
     }
 }
+
+
 #endif // ISING_H
