@@ -7,11 +7,13 @@
 #include <filesystem>
 #include<fstream>
 #include<iomanip>
-#ifdef _OPENACC
-#include<openacc.h>
-#endif
 
 std::mt19937_64 gen(std::random_device{}()); // Create the random number generator globally
+/**
+ * NOTE: Combine the three function into one templated function. 
+ * NOTE: Implement an intilization function. 
+ */
+
 double get_uniform()
 {
     std::uniform_real_distribution<double> dist(0.0, 1.0);
@@ -66,13 +68,14 @@ double get_energy(const std::vector<int> &lattice, const int &n, const double &J
     return energy / 2; // Avoid double-counting interactions
 }
 
+/**
+ * NOTE: divide the steps among processes using MPI 
+ * When you do rememeber to add the corresponding lines to look for MPI in the CMakeLists.txt 
+ */
 // Perform one Metropolis-Hasting step
 void step(std::vector<int> &lattice, const int &n, const double &J, const double &beta)
 {
-    #ifdef _OPENACC
-    #pragma acc parallel loop 
-    #else
-    #endif
+    
     for (int k = 0; k < n * n; k++)
     {
         int i = get_indices(n);
@@ -118,6 +121,5 @@ void simulate(std::vector<int> &lattice, const int &n, const double &J, const do
         }
     }
 }
-
 
 #endif // ISING_H
